@@ -6,6 +6,10 @@
 
 Ce projet consiste à améliorer une application web de calculatrice développée avec Python et Flask. Le travail vise à documenter le code existant, à identifier et corriger les bogues à l'aide de tests, et à utiliser GitHub pour faciliter la collaboration et la gestion des versions.
 
+L'application permet d'effectuer quatre opérations arithmétiques : l'addition, la soustraction, la multiplication et la division.
+
+Le projet comprend une interface HTML/CSS, des fonctions JavaScript pour la saisie des expressions et un serveur Flask pour effectuer les calculs.
+
 ## Prérequis
 
 - Python 3
@@ -25,3 +29,41 @@ Ce projet consiste à améliorer une application web de calculatrice développé
    `python3 app.py`
 5. Ouvrir un navigateur et accéder à :
    `http://127.0.0.1:5000/`
+
+## Utilisation
+
+1. Ouvrir l'application dans un navigateur.
+2. Cliquer sur les boutons numériques pour saisir le premier nombre.
+3. Sélectionner un opérateur (+, -, \* ou /).
+4. Saisir le deuxième nombre.
+5. Cliquer sur `=` pour afficher le résultat.
+6. Cliquer sur `C` pour effacer l'expression.
+
+## Tests
+
+Les tests permettront de vérifier :
+
+- Les opérations arithmétiques.
+- La gestion des expressions invalides.
+- Le fonctionnement de l'application.
+
+## Contribution
+
+Pour contribuer au projet :
+
+1. Créer une GitHub Issue pour signaler un bogue.
+2. Créer une branche distincte pour chaque issue.
+3. Effectuer les corrections sur la branche correspondante.
+4. Exécuter les tests pour vérifier les corrections.
+5. Ouvrir une Pull Request.
+6. Faire réviser et fusionner la Pull Request dans `main`.
+
+## Structure du projet
+
+- `app.py` : serveur Flask et traitement des expressions.
+- `operators.py` : fonctions des opérations arithmétiques.
+- `templates/` : interface HTML et fonctions JavaScript.
+- `static/` : styles CSS de la calculatrice.
+- `tests/` : tests de l'application (à ajouter).
+
+Chaque répertoire possède son propre fichier `README.md` décrivant son rôle, ses fichiers principaux et ses dépendances.
