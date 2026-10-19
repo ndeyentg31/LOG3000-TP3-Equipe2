@@ -1,4 +1,9 @@
-/* Styles de l'interface de la calculatrice : mise en page, affichage et boutons. */
+/*
+ * Feuille de style de la calculatrice web.
+ * Définit la mise en page, les couleurs et
+ * l'apparence des boutons.
+ */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -10,6 +15,7 @@ body {
 }
 
 .calculator {
+  /* Limite la largeur de la calculatrice pour éviter qu'elle soit trop grande. */
   width: 100%;
   max-width: 600px;
   background-color: #333;
@@ -39,6 +45,7 @@ h1 {
 }
 
 .buttons {
+  /* Organise les boutons sur quatre colonnes de largeur égale. */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
