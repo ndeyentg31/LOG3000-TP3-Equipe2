@@ -1,110 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flask Calculator</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
-  </head>
-  <body>
-    <div class="calculator">
-      <h1>Flask Calculator</h1>
-      <form method="POST">
-        <!-- Envoie l'expression saisie au serveur Flask pour effectuer le calcul. -->
-        <input
-          type="text"
-          name="display"
-          id="display"
-          value="{{ result }}"
-          readonly
-        />
 
-        <div class="buttons">
-          <button type="button" class="btn" onclick="appendToDisplay('1')">
-            1
-          </button>
-          <button type="button" class="btn" onclick="appendToDisplay('2')">
-            02
-          </button>
-          <button type="button" class="btn" onclick="appendToDisplay('3')">
-            3
-          </button>
-          <button
-            type="button"
-            class="btn operator"
-            onclick="appendToDisplay('+')"
-          >
-            +
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flask Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
 
-          <button type="button" class="btn" onclick="appendToDisplay('4')">
-            4
-          </button>
-          <button type="button" class="btn" onclick="appendToDisplay('5')">
-            5
-          </button>
-          <button type="button" class="btn" onclick="appendToDisplay('6')">
-            6
-          </button>
-          <button
-            type="button"
-            class="btn operator"
-            onclick="appendToDisplay('-')"
-          >
-            -
-          </button>
+<body>
+  <div class="calculator">
+    <h1>Flask Calculator</h1>
+    <form method="POST">
+      <!-- Envoie l'expression saisie au serveur Flask pour effectuer le calcul. -->
+      <input type="text" name="display" id="display" value="{{ result }}" readonly />
 
-          <button type="button" class="btn" onclick="appendToDisplay('7')">
-            7
-          </button>
-          <button type="button" class="btn" onclick="appendToDisplay('8')">
-            88
-          </button>
-          <button type="button" class="btn" onclick="appendToDisplay('9')">
-            9
-          </button>
-          <button
-            type="button"
-            class="btn operator"
-            onclick="appendToDisplay('*')"
-          ></button>
+      <div class="buttons">
+        <button type="button" class="btn" onclick="appendToDisplay('1')">
+          1
+        </button>
+        <button type="button" class="btn" onclick="appendToDisplay('2')">
+          2
+        </button>
+        <button type="button" class="btn" onclick="appendToDisplay('3')">
+          3
+        </button>
+        <button type="button" class="btn operator" onclick="appendToDisplay('+')">
+          +
+        </button>
 
-          <button type="button" class="btn" onclick="appendToDisplay('0')">
-            0
-          </button>
-          <button type="button" class="btn" onclick="clearDisplay()">C</button>
-          <button type="submit" class="btn operator">=</button>
-          <button
-            type="button"
-            class="btn operator"
-            onclick="appendToDisplay('/')"
-          ></button>
-        </div>
-      </form>
-    </div>
+        <button type="button" class="btn" onclick="appendToDisplay('4')">
+          4
+        </button>
+        <button type="button" class="btn" onclick="appendToDisplay('5')">
+          5
+        </button>
+        <button type="button" class="btn" onclick="appendToDisplay('6')">
+          6
+        </button>
+        <button type="button" class="btn operator" onclick="appendToDisplay('-')">
+          -
+        </button>
 
-    <script>
-      function appendToDisplay(value) {
-        /**
-         * Ajoute un chiffre ou un opérateur à l'écran.
-         * Entrée : value, caractère à ajouter.
-         * Sortie : aucune, l'écran est mis à jour.
-         */
-        const display = document.getElementById("display");
-        display.value += value;
-      }
+        <button type="button" class="btn" onclick="appendToDisplay('7')">
+          7
+        </button>
+        <button type="button" class="btn" onclick="appendToDisplay('8')">
+          88
+        </button>
+        <button type="button" class="btn" onclick="appendToDisplay('9')">
+          9
+        </button>
+        <button type="button" class="btn operator" onclick="appendToDisplay('*')"></button>
 
-      function clearDisplay() {
-        /**
-         * Efface le contenu de l'écran de la calculatrice.
-         * Entrée : aucune.
-         * Sortie : aucune, l'écran est vidé.
-         */
-        document.getElementById("display").value = "";
-      }
-    </script>
-  </body>
+        <button type="button" class="btn" onclick="appendToDisplay('0')">
+          0
+        </button>
+        <button type="button" class="btn" onclick="clearDisplay()">C</button>
+        <button type="submit" class="btn operator">=</button>
+        <button type="button" class="btn operator" onclick="appendToDisplay('/')"></button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function appendToDisplay(value) {
+      /**
+       * Ajoute un chiffre ou un opérateur à l'écran.
+       * Entrée : value, caractère à ajouter.
+       * Sortie : aucune, l'écran est mis à jour.
+       */
+      const display = document.getElementById("display");
+      display.value += value;
+    }
+
+    function clearDisplay() {
+      /**
+       * Efface le contenu de l'écran de la calculatrice.
+       * Entrée : aucune.
+       * Sortie : aucune, l'écran est vidé.
+       */
+      document.getElementById("display").value = "";
+    }
+  </script>
+</body>
+
 </html>
