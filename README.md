@@ -16,6 +16,7 @@ Le projet comprend une interface HTML/CSS, des fonctions JavaScript pour la sais
 - pip
 - Flask
 - Git
+- pytest (pour les tests)
 
 ## Installation
 
@@ -24,9 +25,9 @@ Le projet comprend une interface HTML/CSS, des fonctions JavaScript pour la sais
 2. Accéder au dossier du projet :
    `cd LOG3000-TP3-Equipe2`
 3. Installer Flask :
-   `python3 -m pip install flask`
+   `python -m pip install flask`
 4. Démarrer l'application :
-   `python3 app.py`
+   `python app.py`
 5. Ouvrir un navigateur et accéder à :
    `http://127.0.0.1:5000/`
 
@@ -41,22 +42,35 @@ Le projet comprend une interface HTML/CSS, des fonctions JavaScript pour la sais
 
 ## Tests
 
-Les tests permettront de vérifier :
+Les tests permettent de vérifier :
 
-- Les opérations arithmétiques.
-- La gestion des expressions invalides.
-- Le fonctionnement de l'application.
+- Les quatre opérations arithmétiques.
+- Les libellés des boutons 2, 8, * et /.
+
+Installer les dépendances :
+
+```bash
+python -m pip install flask pytest
+```
+
+Exécuter les tests depuis la racine du projet :
+
+```bash
+python -m pytest tests/ -v
+```
 
 ## Contribution
 
 Pour contribuer au projet :
 
 1. Créer une GitHub Issue pour signaler un bogue.
-2. Créer une branche distincte pour chaque issue.
-3. Effectuer les corrections sur la branche correspondante.
-4. Exécuter les tests pour vérifier les corrections.
-5. Ouvrir une Pull Request.
-6. Faire réviser et fusionner la Pull Request dans `main`.
+2. Décrire le problème, les étapes de reproduction et les résultats attendus.
+3. Assigner l'Issue à un membre de l'équipe.
+4. Créer une branche distincte pour chaque issue.
+5. Effectuer les corrections sur la branche correspondante.
+6. Exécuter les tests pour vérifier les corrections.
+7. Ouvrir une Pull Request.
+8. Faire réviser et fusionner la Pull Request dans `main`.
 
 ## Structure du projet
 
@@ -64,6 +78,6 @@ Pour contribuer au projet :
 - `operators.py` : fonctions des opérations arithmétiques.
 - `templates/` : interface HTML et fonctions JavaScript.
 - `static/` : styles CSS de la calculatrice.
-- `tests/` : tests de l'application (à ajouter).
+- `tests/` : tests automatisés des opérations et de l'interface.
 
 Chaque répertoire possède son propre fichier `README.md` décrivant son rôle, ses fichiers principaux et ses dépendances.
