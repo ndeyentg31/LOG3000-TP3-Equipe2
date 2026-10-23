@@ -10,6 +10,7 @@ de la calculatrice.
 ## Dépendances
 
 - Python 3
+- Flask
 - pytest
 
 Installation :
@@ -33,3 +34,12 @@ python -m pytest tests/ -v
 - test_multiply : vérifie la multiplication.
 - test_divide : vérifie la division décimale.
 
+
+### test_boutons.py
+
+Ce fichier vérifie que les boutons de la calculatrice affichent les caractères correspondant à leurs actions :
+
+- Bouton `2` : vérifie que le libellé affiché est `2`.
+- Bouton `8` : vérifie que le libellé affiché est `8`.
+- Bouton `*` : vérifie que le libellé affiché est `*`.
+- Bouton `/` : vérifie que le libellé affiché est `/`.
