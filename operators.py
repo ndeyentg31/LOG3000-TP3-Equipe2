@@ -37,7 +37,7 @@ def multiply(a,b):
     Returns:
         int ou float: Résultat attendu de a * b.
     """
-    return a ** b
+    return a * b
 
 def divide(a,b):
     """
